@@ -29,6 +29,7 @@
           ./modules/hardware.nix
           ./modules/networking.nix
           ./modules/packages.nix
+          ./modules/shell.nix
           ./modules/users.nix
         ];
       };
