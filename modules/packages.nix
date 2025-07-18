@@ -2,6 +2,8 @@
 
 {
 
+nixpkgs.config.allowUnfree = true;
+
 imports = [
     ./packages/core.nix
     ./packages/clitools.nix

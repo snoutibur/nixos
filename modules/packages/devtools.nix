@@ -8,6 +8,7 @@
   config = lib.mkIf config.devtools.enable {
     environment.systemPackages = with pkgs; [
         kdePackages.kate
+        jetbrains.idea-ultimate
     ] ++ (with pkgs-unstable; [
 
     ]);
