@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
 networking.hostName = "nixos"; # Define your hostname.
@@ -11,9 +11,8 @@ networking.hostName = "nixos"; # Define your hostname.
 # Enable networking
 networking.networkmanager.enable = true;
 
-# List services that you want to enable:
-# Enable the OpenSSH daemon.
-# services.openssh.enable = true;
+# Network services #
+services.openssh.enable = true;
 
 # Open ports in the firewall.
 # networking.firewall.allowedTCPPorts = [ ... ];
