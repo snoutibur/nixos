@@ -8,13 +8,10 @@ imports = [
     ./packages/devtools.nix
 ];
 
-corepkgs.enable = true;
-clitools.enable = true;
-devtools.enable = true;
-
 # Install firefox.
 programs.firefox.enable = true;
 
-# Allow unfree packages
-nixpkgs.config.allowUnfree = true;
+corepkgs.enable = true;
+clitools.enable = true;
+devtools.enable = true;
 }

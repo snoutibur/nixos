@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, pkgs-unstable, lib, ... }:
 
 {
   options = {
@@ -8,6 +8,8 @@
   config = lib.mkIf config.devtools.enable {
     environment.systemPackages = with pkgs; [
         kdePackages.kate
-    ];
+    ] ++ (with pkgs-unstable; [
+
+    ]);
   };
 }
