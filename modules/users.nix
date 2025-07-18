@@ -24,7 +24,7 @@ users.users.doge = {
     description = "snoutibur";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-        kdePackages.kate
+
     ];
 };
 }
