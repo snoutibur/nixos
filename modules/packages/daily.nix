@@ -9,6 +9,8 @@
     environment.systemPackages = with pkgs; [
       obsidian
       spotify
+      spicetify-cli
+      vesktop
     ];
   };
 }
