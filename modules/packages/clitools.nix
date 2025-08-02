@@ -7,10 +7,13 @@
 
   config = lib.mkIf config.clitools.enable {
     environment.systemPackages = with pkgs; [
+        # System management
         btop
         fastfetch
+        # Files
         lazygit
         tree
+        unzip
         wget
     ];
   };

@@ -5,10 +5,11 @@
 nixpkgs.config.allowUnfree = true;
 
 imports = [
-    ./packages/core.nix
+    ./packages/bloatware.nix
     ./packages/clitools.nix
-    ./packages/devtools.nix
+    ./packages/core.nix
     ./packages/daily.nix
+    ./packages/devtools.nix
 ];
 
 # Install firefox.
@@ -18,4 +19,5 @@ corepkgs.enable = true;
 clitools.enable = true;
 devtools.enable = true;
 daily.enable = true;
+bloat.enable = true;
 }
