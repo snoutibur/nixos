@@ -1,10 +1,14 @@
 { config, pkgs, ... }:
 
 {
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  # Bootloader
+  # TODO: make this generic
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+#  boot.loader.grub.enable = true;
+#  boot.loader.grub.device = "/dev/sda";
+#  boot.loader.grub.useOSProber = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -18,6 +22,9 @@
   system.stateVersion = "25.05";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  nix.gc.automatic = true; # Periodically clean out rubbish
+  nix.gc.options = "--delete-old"; # Nuke old generations
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
