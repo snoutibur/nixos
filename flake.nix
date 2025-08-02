@@ -1,5 +1,5 @@
 {
-  description = "rar!! a flake!";
+  description = "NixOS system config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=25.05";
@@ -7,31 +7,30 @@
     hardware.url = "path:/etc/nixos/hardware-configuration/";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, hardware, ... }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${system};
     pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+
+    commonModules = [
+        ./configuration.nix
+        ./modules/de.nix
+        ./modules/hardware.nix
+        ./modules/networking.nix
+        ./modules/packages.nix
+        ./modules/shell.nix
+        ./modules/users.nix
+      ];
   in {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
-        system = system;
+      hp-aio = lib.nixosSystem {
+        modules = [./hosts/hp-aio/configuration.nix];
 
-      specialArgs = {
-        inherit pkgs-unstable;
-      };
-
-        modules = [
-          hardware.nixosModules.configuration
-          ./configuration.nix
-          ./modules/de.nix
-          ./modules/hardware.nix
-          ./modules/networking.nix
-          ./modules/packages.nix
-          ./modules/shell.nix
-          ./modules/users.nix
-        ];
+        specialArgs = {
+          inherit pkgs-unstable;
+        };
       };
     };
   };

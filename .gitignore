@@ -9,4 +9,4 @@ result-*
 flake.lock
 
 # External hardware used. Found at /etc/nixos/hardware-config/
-hardware-configuration.nix
+#hardware-configuration.nix
