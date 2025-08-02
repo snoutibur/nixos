@@ -5,6 +5,7 @@
     users.defaultUserShell = pkgs.zsh;
 
     environment.systemPackages = with pkgs; [
+        kitty
         oh-my-zsh
         starship
     ];

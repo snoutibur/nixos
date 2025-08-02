@@ -9,7 +9,9 @@
     environment.systemPackages = with pkgs; [
         btop
         fastfetch
+        lazygit
         tree
+        wget
     ];
   };
 }

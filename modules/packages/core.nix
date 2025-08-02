@@ -9,8 +9,8 @@
     environment.systemPackages = with pkgs; [
       # Required for system management
       git
-      lazygit
-      dotter
+      dotter # Dotfile manager
+      konsave # KDE Plasma config manager
     ];
   };
 }
