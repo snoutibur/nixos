@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    hardware.url = "path:/etc/nixos/hardware-configuration/";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
