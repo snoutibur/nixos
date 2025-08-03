@@ -24,7 +24,7 @@
   in {
     nixosConfigurations = {
       hp-aio = lib.nixosSystem {
-        modules = [./hosts/hp-aio/configuration.nix] ++ commonModules;
+        modules = [./hosts/hp-aio/config.nix] ++ commonModules;
 
         specialArgs = {
           inherit pkgs-unstable;

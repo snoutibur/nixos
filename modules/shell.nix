@@ -1,12 +1,12 @@
 { config, pkgs, lib, ... }:
 
 {
-    programs.zsh.enable = true;
-    users.defaultUserShell = pkgs.zsh;
+programs.zsh.enable = true;
+users.defaultUserShell = pkgs.zsh;
 
-    environment.systemPackages = with pkgs; [
-        kitty
-        oh-my-zsh
-        starship
-    ];
+environment.systemPackages = with pkgs; [
+  kitty
+  oh-my-zsh
+  starship
+];
 }
