@@ -1,13 +1,20 @@
 { config, lib, pkgs, ... }:
 
+# / ---
+#   HP AIO configuration
+# --- /
+
+
 {
-  # Bootloader & Latest kernel
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
+
+  # Bootloader & Latest kernel #
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  # Host-specific configuration
-  networking.hostName = "nixos";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -17,16 +24,30 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05";
 
-  imports = [
-    ./hardware-configuration.nix
 
-    # Import common modules
-    ../../configuration.nix # Common config files
-    ../../modules/de.nix # Desktop environment
-    ../../modules/hardware.nix
-    ../../modules/networking.nix
-    ../../modules/packages.nix
-    ../../modules/shell.nix
-    ../../modules/users.nix
+  # Packages #
+  daily.enable = true; # Day to day essentials
+  devtools.enable = true; # Development tooling
+  bloat.enable = true; # Silly fun
+
+
+  # Network #
+  networking.hostName = "nixos";
+  networking.networkmanager.enable = true; # Enables networking
+
+  # Services
+  services.openssh.enable = true;
+
+  # Firewall
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [
+    22    # SSH
   ];
+  networking.firewall.allowedUDPPorts = [
+
+  ];
+
+  # Configure network proxy if necessary
+  # networking.proxy.default = "http://user:password@proxy:port/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 }
