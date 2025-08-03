@@ -9,6 +9,7 @@
     environment.systemPackages = with pkgs; [
         kdePackages.kate
         jetbrains.idea-ultimate
+        trufflehog
     ] ++ (with pkgs-unstable; [
 
     ]);
