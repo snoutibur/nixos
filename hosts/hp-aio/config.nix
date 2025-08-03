@@ -25,7 +25,7 @@
 
 
   # Network #
-  networking.hostName = "nixos";
+  networking.hostName = "hp-aio";
   networking.networkmanager.enable = true; # Enables networking
 
   # Services
