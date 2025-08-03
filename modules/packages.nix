@@ -14,10 +14,6 @@ imports = [
 
 # Install firefox.
 programs.firefox.enable = true;
-
-corepkgs.enable = true;
-clitools.enable = true;
-devtools.enable = true;
-daily.enable = true;
-bloat.enable = true;
+corepkgs.enable = true; # Must have packages
+clitools.enable = true; # handy tiny CLI utilities
 }
