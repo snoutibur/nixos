@@ -3,8 +3,11 @@
 {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  nix.gc.automatic = true; # Periodically clean out rubbish
-  nix.gc.options = "--delete-old"; # Nuke old generations
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-old";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
