@@ -11,6 +11,9 @@
       git
       dotter # Dotfile manager
       konsave # KDE Plasma config manager
+
+      # Nerd font used by the system
+      nerd-fonts.jetbrains-mono
     ];
   };
 }

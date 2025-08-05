@@ -9,23 +9,30 @@
     programs.hyprland.enable = true;
 
     environment.systemPackages = with pkgs; [
+      ## Apps & Window management
+      wofi # launcher
+
+      ## System control ##
       brightnessctl # Display brightness
-      hyprpaper # background setter
       hyprsunset # night shift
+
+      ## DE items ##
+      hyprlock # lock screen
+      hypridle # idle daemon
+
       pamixer # Media controls
+      swww # background setter
 
       grim # CLI scrnshot tool
       slurp # scrnshot regions
 
       mako # notifs
-      waybar # status bar
       eww # widgets
-      wofi # launcher
+      waybar # status bar
+
       wl-clipboard # clipboard functionality
 
-      hyprlock # lock screen
-      hypridle # idle daemon
-
+      ## Libs ##
       hyprland-qt-support # patches
       hyprland-qtutils # additional QT patches
       xdg-desktop-portal-hyprland # comm to compositor thru D-Bus
