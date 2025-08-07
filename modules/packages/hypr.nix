@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, pkgs-unstable, lib, ... }:
 
 {
   options = {
@@ -20,15 +20,16 @@
       hyprlock # lock screen
       hypridle # idle daemon
 
-      pamixer # Media controls
       swww # background setter
-
+      hyprcursor
+      
       grim # CLI scrnshot tool
       slurp # scrnshot regions
 
+      pkgs-unstable.hyprpanel # bar
       mako # notifs
       eww # widgets
-      waybar # status bar
+      pamixer # Media controls
 
       wl-clipboard # clipboard functionality
 
