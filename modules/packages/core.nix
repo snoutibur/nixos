@@ -12,8 +12,25 @@
       dotter # Dotfile manager
       konsave # KDE Plasma config manager
 
-      # Nerd font used by the system
+      # Wayland font rendering
+      fontconfig
+      freetype
+
+      wl-clipboard # clipboard functionality in wayland
+
+      # icon rendering
+      adwaita-icon-theme
+      papirus-icon-theme
+    ];
+
+    fonts.packages = with pkgs; [
       nerd-fonts.jetbrains-mono
+      font-awesome
+
+      # Icon packs
+      material-design-icons
+      material-icons
+      material-symbols
     ];
   };
 }

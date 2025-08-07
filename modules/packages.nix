@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
 nixpkgs.config.allowUnfree = true;
 
 imports = [
@@ -12,7 +11,8 @@ imports = [
   ./packages/devtools.nix
 ];
 
-programs.firefox.enable = true;
+programs.firefox.enable = true; # need a web browser
 corepkgs.enable = true; # Must have packages
+fonts.fontconfig.enable = true; # essential fonts
 clitools.enable = true; # handy tiny CLI utilities
 }

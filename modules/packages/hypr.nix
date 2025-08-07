@@ -31,8 +31,6 @@
       eww # widgets
       pamixer # Media controls
 
-      wl-clipboard # clipboard functionality
-
       ## Libs ##
       hyprland-qt-support # patches
       hyprland-qtutils # additional QT patches
