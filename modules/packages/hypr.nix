@@ -22,20 +22,22 @@
 
       swww # background setter
       hyprcursor
-      
-      grim # CLI scrnshot tool
-      slurp # scrnshot regions
 
       pkgs-unstable.hyprpanel # bar
-      mako # notifs
-      eww # widgets
       pamixer # Media controls
+      eww # widgets
+
+      ## Utils ##
+      grim # CLI scrnshot tool
+      slurp # scrnshot regions
+      swappy # Image editor/annotator
 
       ## Libs ##
       hyprland-qt-support # patches
       hyprland-qtutils # additional QT patches
-      xdg-desktop-portal-hyprland # comm to compositor thru D-Bus
       hyprpolkitagent # Needed for GUI apps to request elevated perms
+      xdg-desktop-portal-hyprland # comm to compositor thru D-Bus
+      libnotify
     ];
 };
 }
