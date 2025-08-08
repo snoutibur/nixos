@@ -1,27 +1,28 @@
 # nixos
-My base NixOS configuration.
+My base NixOS setup.
+
+I'm not using nix home manager. Home dotfiles are currently managed by [Dotter](https://github.com/SuperCuber/dotter).
+
+You can find my Linux dotfiles on GitHub when they're ready.
+
 
 ## Setup
-(assuming you've cloned the repo)
+This assumes you've cloned the repo, and have enabled flakes on your system.
+
 
 ### Hardware setup
-To get started, bind `etc/nixos/hardware-configuration` to this repo by running `sudo ./templates/hwcsetup.sh`.
-This script will automatically generate a wrapper flake that makes the external hardware config accessible for this repo / flake.
-_This was done due to `hardware-configuration` being machine specific and auto-generated._
+To get started, define your machine under `hosts/`. Copy and/or modify `hosts/nixos/`. Be sure to rename the folder to your hostname.
 
-Eventually, this config will be updated with a `hosts/` folder to allow for machine-specific configs.
 
 ### Deploying
-Flakes are considered experimental, but mature, and must be enabled. Add `experimental-features = nix-command flakes` to `/etc/nixos/configuration.nix`.
-
-Once flakes have been enabled, you may use this flake on your system by running one of the following
+A rebuild script is bundled in this repo to save time on rebuilding the system.
 ```bash
 cd PATH_TO_REPO
-sudo nixos-rebuild switch --flake .
 
-# 1 liner
-sudo nixos-rebuild switch --flake PATH_TO_REPO
+./rebuild.sh
+./rebuild.sh hostname
 ```
 
-### Additional config
-I'm not using nix home manager. Home dotfiles are managed using dotter, config at [snoutibur/dotconfig](https://github.com/snoutibur/dotConfig).
+**For your first** run, it's recommended to use `./rebuild.sh hostname` to make sure that you're building for the right host defined under `hosts/`. Make sure that you changed your hostname under `hosts/yourmachine/config.nix`.
+
+**For all subsequent runs**, run `./rebuild.sh` and the script will automatically assume that your configuration in `hosts/` is the same as your hostname. If you renamed anything, run as if it's your first run just to be safe.
