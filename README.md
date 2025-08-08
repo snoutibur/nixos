@@ -3,7 +3,7 @@ My base NixOS setup.
 
 I'm not using nix home manager. Home dotfiles are currently managed by [Dotter](https://github.com/SuperCuber/dotter).
 
-You can find my Linux dotfiles on GitHub when they're ready.
+You can find my Linux dotfiles at [snoutibur/dotLinux](https://github.com/snoutibur/dotLinux).
 
 
 ## Setup
