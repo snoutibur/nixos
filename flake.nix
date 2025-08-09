@@ -23,6 +23,8 @@
       ];
   in {
     nixosConfigurations = {
+      # Make sure you define your host in here too!
+
       hp-aio = lib.nixosSystem {
         modules = [./hosts/hp-aio/config.nix] ++ commonModules;
 
@@ -30,6 +32,12 @@
           inherit pkgs-unstable;
         };
       };
+
+      thinkbowok = lib.nixosSystem {
+        modules = [ ./hosts/thinkbowok/config.nix ] ++ commonModules;
+        specialArgs = { inherit pkgs-unstable; };
+      };
+
     };
   };
 }
