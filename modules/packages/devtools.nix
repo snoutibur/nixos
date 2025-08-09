@@ -8,10 +8,8 @@
   config = lib.mkIf config.devtools.enable {
     environment.systemPackages = with pkgs; [
         kdePackages.kate
-        jetbrains.idea-ultimate
+        pkgs-unstable.jetbrains.idea-ultimate
         trufflehog
-    ] ++ (with pkgs-unstable; [
-
-    ]);
+    ];
   };
 }
