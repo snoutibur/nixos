@@ -7,9 +7,10 @@
 
   config = lib.mkIf config.devtools.enable {
     environment.systemPackages = with pkgs; [
-        kdePackages.kate
+        kdePackages.kate # basic text editor
+        trufflehog # secrets scanner
+        git-filter-repo # rewriting git history
         pkgs-unstable.jetbrains.idea-ultimate
-        trufflehog
     ];
   };
 }
