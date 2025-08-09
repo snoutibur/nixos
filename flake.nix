@@ -10,24 +10,39 @@
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.${system};
-    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+
+    # Import nixpkgs with allowUnfree enabled
+    pkgs = import nixpkgs {
+      system = system;
+      config = {
+        allowUnfree = true;
+      };
+    };
+
+    pkgs-unstable = import nixpkgs-unstable {
+      system = system;
+      config = {
+        allowUnfree = true;
+      };
+    };
 
     commonModules = [
-        ./configuration.nix
-        ./modules/de.nix
-        ./modules/hardware.nix
-        ./modules/packages.nix
-        ./modules/shell.nix
-        ./modules/users.nix
-      ];
-  in {
+      ./configuration.nix
+      ./modules/de.nix
+      ./modules/hardware.nix
+      ./modules/packages.nix
+      ./modules/shell.nix
+      ./modules/users.nix
+    ];
+  in
+  {
     nixosConfigurations = {
       hp-aio = lib.nixosSystem {
-        modules = [./hosts/hp-aio/config.nix] ++ commonModules;
+        system = "x86_64-linux";
+        modules = [ ./hosts/hp-aio/config.nix ] ++ commonModules;
 
         specialArgs = {
-          inherit pkgs-unstable;
+          inherit pkgs pkgs-unstable;
         };
       };
     };

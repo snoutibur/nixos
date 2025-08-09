@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-nixpkgs.config.allowUnfree = true;
-
 imports = [
   ./packages/bloatware.nix
   ./packages/clitools.nix
