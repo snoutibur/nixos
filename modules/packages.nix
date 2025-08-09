@@ -15,6 +15,8 @@ environment.sessionVariables = {
   NIXOS_OZONE_WL = "1"; # Tell electron apps to use wayland
 };
 
+services.dbus.enable = true; # typically enabled by default
+
 programs.firefox.enable = true; # need a web browser
 corepkgs.enable = true; # Must have packages
 fonts.fontconfig.enable = true; # essential fonts

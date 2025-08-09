@@ -40,11 +40,15 @@
       ## Libs ##
       hyprland-qt-support # patches
       hyprland-qtutils # additional QT patches
+
       hyprpolkitagent # Needed for GUI apps to request elevated perms
+
       xdg-desktop-portal-hyprland # comm to compositor thru D-Bus
       xdg-desktop-portal-gtk # additional desktop interactions
+
       xwayland # bridge x11 -> wayland
       libnotify # notif handler
+      playerctl # media control
     ];
 };
 }
