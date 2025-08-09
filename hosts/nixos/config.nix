@@ -2,6 +2,7 @@
 
 # / ---
 #   Generic Configuration: Modify to your needs
+#   Be sure to define your host under flake.nix!
 # --- /
 
 {
@@ -25,7 +26,7 @@
 
 
   # Network #
-  networking.hostName = "nixos"; # change this to your desired hostname
+  networking.hostName = "nixos"; # change this to your desired hostname. For rebuild.sh to work, this should be the same name that defined this machine.
   networking.networkmanager.enable = true;
 
   # Services #
