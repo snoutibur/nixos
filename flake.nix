@@ -38,7 +38,6 @@
       ./modules/packages.nix
       ./modules/shell.nix
       ./modules/users.nix
-      ./modules/home-manager.nix
     ];
   in {
     nixosConfigurations = {

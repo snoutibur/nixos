@@ -1,6 +1,10 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
+  imports = [
+    inputs.home-manager.nixosModules.default
+  ];
+
   options = {
     corepkgs.enable = lib.mkEnableOption "enables essential packages";
   };
@@ -11,6 +15,7 @@
       git
       dotter # Dotfile manager
       konsave # KDE Plasma config manager
+      home-manager # secondary dots & config
 
       # Wayland font rendering
       fontconfig
