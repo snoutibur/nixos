@@ -26,6 +26,11 @@
       # icon rendering
       adwaita-icon-theme
       papirus-icon-theme
+
+      # Secrets management
+      kdePackages.kwallet
+      kdePackages.kwalletmanager  # GUI for managing wallet
+      kdePackages.kwallet-pam     # PAM integration for auto-unlock
     ];
 
     fonts.packages = with pkgs; [
