@@ -13,8 +13,19 @@
 
   # Bootloader #
   # If you're using system-d boot.
-  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.loader.systemd-boot = {
+    enable = true;
+    # Autodetect windows
+    extraEntries = {
+      "windows.conf" = ''
+        title Windows
+        efi /EFI/Microsoft/Boot/bootmgfw.efi
+      '';
+    };
+  };
+
 
   # Kernel #
   boot.kernelPackages = pkgs.linuxPackages_latest;
