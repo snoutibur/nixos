@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";	# home manager could use the existing nixpkgs declaration.
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
@@ -33,9 +38,9 @@
       ./modules/packages.nix
       ./modules/shell.nix
       ./modules/users.nix
+      ./modules/home-manager.nix
     ];
-  in
-  {
+  in {
     nixosConfigurations = {
       # Make sure you define your host in here too!
 
@@ -50,7 +55,9 @@
 
       thinkbowok = lib.nixosSystem {
         modules = [ ./hosts/thinkbowok/config.nix ] ++ commonModules;
-        specialArgs = { inherit pkgs-unstable; };
+        specialArgs = {
+          inherit pkgs pkgs-unstable inputs;
+        };
       };
 
     };
