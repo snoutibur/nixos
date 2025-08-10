@@ -26,8 +26,7 @@
 
 
   # Network #
-  networking.hostName = "thinkbowok"; # change this to your desired hostname
-  networking.networkmanager.enable = true;
+  networking.hostName = "thinkbowok";
 
   # Services #
   services.openssh.enable = true;

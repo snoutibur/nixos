@@ -26,7 +26,6 @@
 
   # Network #
   networking.hostName = "hp-aio";
-  networking.networkmanager.enable = true; # Enables networking
 
   # Services
   services.openssh.enable = true;

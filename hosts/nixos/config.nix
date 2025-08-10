@@ -27,7 +27,6 @@
 
   # Network #
   networking.hostName = "nixos"; # change this to your desired hostname. For rebuild.sh to work, this should be the same name that defined this machine.
-  networking.networkmanager.enable = true;
 
   # Services #
   services.openssh.enable = true;

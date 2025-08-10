@@ -22,4 +22,10 @@ services.pipewire = {
 
 # Enable touchpad support (enabled default in most desktopManager).
 services.libinput.enable = true;
+
+## Networking ##
+networking.networkmanager.enable = true; # Enables networking
+  environment.systemPackages = with pkgs; [
+    networkmanagerapplet # adds nm-applet for system trays
+  ];
 }
