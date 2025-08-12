@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, inputs, hyprland-plugins, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should manage.
@@ -56,10 +56,21 @@
   #
   #  /etc/profiles/per-user/doge/etc/profile.d/hm-session-vars.sh
   #
+
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  ## HYPRLAND ITEMS ##
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    plugins = [
+      pkgs.hyprlandPlugins.hyprsplit
+      pkgs.hyprlandPlugins.hyprexpo
+    ];
+  };
 }

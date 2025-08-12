@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
@@ -59,6 +59,14 @@
         };
       };
 
+    };
+
+    homeConfigurations = {
+      doge = home-manager.lib.homeManagerConfiguration {
+        pkgs = pkgs;
+        modules = [ ./home-manager/home.nix ];
+        extraSpecialArgs = { inherit inputs; };
+      };
     };
   };
 }
