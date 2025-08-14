@@ -5,16 +5,16 @@ nixpkgs.config.allowUnfree = true;
 
 imports = [
   # essentials
-  ./packages/core.nix
-  ./packages/daily.nix
+  ./packages/core.nix # necessities for the system to run or read dotfiles
+  ./packages/daily.nix # essential everyday tools
 
   # Development
-  ./packages/clitools.nix
-  ./packages/development/devtools.nix
-  ./packages/development/rust.nix
+  ./packages/clitools.nix # helpful CLI utilities
+  ./packages/development/devtools.nix # Essential development tools
+  ./packages/development/rust.nix # rust dev environment
 
   # Misc
-  ./packages/bloatware.nix
+  ./packages/bloatware.nix # fun packages
 ];
 
 environment.sessionVariables = {
