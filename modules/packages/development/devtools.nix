@@ -2,7 +2,7 @@
 
 {
   options = {
-    devtools.enable = lib.mkEnableOption "enable development tooling & packages";
+    devtools.enable = lib.mkEnableOption "Enables general development tooling";
   };
 
   config = lib.mkIf config.devtools.enable {
@@ -12,7 +12,7 @@
         git-filter-repo # rewriting git history
 
         # Jetbrains tooling
-        pkgs-unstable.jetbrains.idea-ultimate
+        pkgs-unstable.jetbrains.idea-ultimate # I typically use Idea as my main editor
         pkgs-unstable.jetbrains-toolbox
     ];
   };

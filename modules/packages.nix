@@ -4,11 +4,17 @@
 nixpkgs.config.allowUnfree = true;
 
 imports = [
-  ./packages/bloatware.nix
-  ./packages/clitools.nix
+  # essentials
   ./packages/core.nix
   ./packages/daily.nix
-  ./packages/devtools.nix
+
+  # Development
+  ./packages/clitools.nix
+  ./packages/development/devtools.nix
+  ./packages/development/rust.nix
+
+  # Misc
+  ./packages/bloatware.nix
 ];
 
 environment.sessionVariables = {
@@ -18,6 +24,7 @@ environment.sessionVariables = {
 services.dbus.enable = true; # typically enabled by default
 
 programs.firefox.enable = true; # need a web browser
+
 corepkgs.enable = true; # Must have packages
 fonts.fontconfig.enable = true; # essential fonts
 clitools.enable = true; # handy tiny CLI utilities
