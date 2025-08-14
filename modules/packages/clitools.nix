@@ -8,6 +8,7 @@
   config = lib.mkIf config.clitools.enable {
     environment.systemPackages = with pkgs; [
         # System management
+        tmux
         btop
         fastfetch
         # Files
