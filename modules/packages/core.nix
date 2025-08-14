@@ -17,6 +17,11 @@
       konsave # KDE Plasma config manager
       home-manager # secondary dots & config
 
+      # Shell
+      kitty
+      oh-my-zsh
+      starship
+
       # Wayland font rendering
       fontconfig
       freetype
