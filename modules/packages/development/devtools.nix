@@ -11,6 +11,9 @@
         trufflehog # secrets scanner
         git-filter-repo # rewriting git history
 
+        # Common dependencies
+        gcc
+
         # Jetbrains tooling
         pkgs-unstable.jetbrains.idea-ultimate # I typically use Idea as my main editor
         pkgs-unstable.jetbrains-toolbox

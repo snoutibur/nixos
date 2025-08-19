@@ -12,6 +12,7 @@ imports = [
   ./packages/clitools.nix # helpful CLI utilities
   ./packages/development/devtools.nix # Essential development tools
   ./packages/development/rust.nix # rust dev environment
+  ./packages/development/python.nix # python dev environment
 
   # Misc
   ./packages/bloatware.nix # fun packages

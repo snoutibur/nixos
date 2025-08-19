@@ -12,8 +12,8 @@
 
   # Developer #
   devtools.enable = false; # base development tooling
-  rust.enable = false;
-
+  rust.enable = false; # Rust development environment
+  python.enable = false; # Python development environment
 
   # Define one-off packages for this machine
     packages = with pkgs; [
