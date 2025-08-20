@@ -7,5 +7,4 @@
 
   devtools.enable = true;
   rust.enable = true;
-  python.enable = true;
 }
