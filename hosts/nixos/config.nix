@@ -12,20 +12,23 @@
   ];
 
 
-  # Bootloader #
-  # If you're using system-d boot.
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Bootloader - CHOOSE ONE #
+  boot.loader = {
+    # systemd-boot
+    boot.loader.systemd-boot.enable = false;
 
-  boot.loader.systemd-boot = {
-    enable = true;
-    # Autodetect windows
-    extraEntries = {
-      "windows.conf" = ''
-        title Windows
-        efi /EFI/Microsoft/Boot/bootmgfw.efi
-      '';
+    # grub
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = true;
     };
+
+    # For efi systems
+    efi.canTouchEfiVariables = true;
   };
+
 
   # Kernel #
   boot.kernelPackages = pkgs.linuxPackages_latest;

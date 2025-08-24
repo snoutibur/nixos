@@ -11,11 +11,17 @@
   ];
 
 
-  # Bootloader #
-  # If you're using system-d boot.
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot = {
-    enable = true;
+  # Bootloader
+  boot.loader = {
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = true;
+    };
+
+    # For efi systems
+    efi.canTouchEfiVariables = true;
   };
 
   # Kernel #
