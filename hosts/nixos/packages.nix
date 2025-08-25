@@ -12,7 +12,10 @@
 
   # Developer #
   devtools.enable = false; # base development tooling
-  rust.enable = false; # Rust development environment
+  # language environments
+  cdev.enable = false;
+  java.enable = false;
+  rust.enable = false;
 
   # Define one-off packages for this machine
     packages = with pkgs; [
