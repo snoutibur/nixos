@@ -36,6 +36,12 @@
       kdePackages.kwallet
       kdePackages.kwalletmanager  # GUI for managing wallet
       kdePackages.kwallet-pam     # PAM integration for auto-unlock
+
+      # Misc Ricing
+      kdePackages.qtmultimedia
+      (sddm-astronaut.override {
+          embeddedTheme = "hyprland_kath";
+        })
     ];
 
     fonts.packages = with pkgs; [
