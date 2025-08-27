@@ -25,7 +25,7 @@ services.libinput.enable = true;
 
 ## Networking ##
 networking.networkmanager.enable = true; # Enables networking
-  environment.systemPackages = with pkgs; [
-    networkmanagerapplet # adds nm-applet for system trays
-  ];
+
+## File Systems & Partitions
+boot.supportedFilesystems = [ "exfat" ];
 }

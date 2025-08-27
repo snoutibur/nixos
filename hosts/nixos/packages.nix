@@ -8,6 +8,7 @@
   # Other packages are installed as part of another module, such as hyprland in DE.nix
 
   daily.enable = true; # Day to day essentials
+  hardware-support.enable = true; # Utility packages to support hardware
   bloat.enable = false; # Silly fun
 
   # Developer #
