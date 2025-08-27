@@ -7,7 +7,7 @@ imports = [
   # essentials
   ./packages/core.nix # necessities for the system to run or read dotfiles
   ./packages/daily.nix # essential everyday tools
-  ./packages/hardware-support # adds packages to support hardware
+  ./packages/hardware-support.nix # adds packages to support hardware
 
   # Development
   ./packages/clitools.nix # helpful CLI utilities
