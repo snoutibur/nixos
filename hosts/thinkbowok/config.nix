@@ -45,4 +45,12 @@
   networking.firewall.allowedUDPPorts = [
 
   ];
+
+  # Shared partition
+  fileSystems."/mnt/Shared" = {
+    device = "/dev/disk/by-uuid/160C-B9B6";
+    fsType = "exfat";
+    options = [ "defaults" "uid=1000" "gid=100" ];
+    neededForBoot = false;
+  };
 }
