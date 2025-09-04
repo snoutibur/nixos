@@ -1,5 +1,5 @@
 {
-  description = "NixOS system config";
+  description = "NixOS top-level system config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=25.05";
@@ -56,9 +56,9 @@
         modules = [ ./hosts/thinkbowok/config.nix ] ++ commonModules;
         specialArgs = {
           inherit pkgs pkgs-unstable inputs;
+          hostname = "thinkbowok";
         };
       };
-
     };
 
     homeConfigurations = {

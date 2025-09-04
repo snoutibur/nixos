@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, hostname, ... }:
 
 # / ---
 #   Lenowo ThinkBook Config
@@ -29,11 +29,8 @@
   system.stateVersion = "25.05"; # First NixOS version this config was used on. Recommended to leave alone.
 
 
-  # Network #
-  networking.hostName = "thinkbowok";
-
-
   # Services #
+  networking.hostName = hostname; # set host name under /flake.nix
   services.openssh.enable = true;
 
 
