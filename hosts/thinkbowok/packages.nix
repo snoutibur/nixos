@@ -3,7 +3,6 @@
 {
   # Enable package sets for this machine
   daily.enable = true;
-  hardware-support.enable = true;
   bloat.enable = true;
 
   devtools.enable = true;
