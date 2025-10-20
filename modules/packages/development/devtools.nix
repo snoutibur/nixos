@@ -15,8 +15,12 @@
         gcc
 
         # Jetbrains tooling
-        pkgs-unstable.jetbrains.idea-ultimate # I typically use Idea as my main editor
-        pkgs-unstable.jetbrains-toolbox
+        pkgs-unstable.jetbrains.idea-ultimate # Idea is my main editor
+
+        # Distrobox & Containers
+        distrobox
+        podman
+        podman-desktop
     ];
   };
 }
