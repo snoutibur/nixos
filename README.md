@@ -3,8 +3,6 @@ My base NixOS setup.
 
 I'm not using nix home manager. Home dotfiles are currently managed by [Dotter](https://github.com/SuperCuber/dotter).
 
-You can find my Linux dotfiles at [snoutibur/dotLinux](https://github.com/snoutibur/dotLinux).
-
 
 ## Setup
 This assumes you've cloned the repo, and have enabled flakes on your system.
