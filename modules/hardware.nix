@@ -21,6 +21,7 @@ services.libinput.enable = true;
 
 ## Networking ##
 networking.networkmanager.enable = true; # Enables networking
+services.tailscale.enable = true; # VPN type access to other machines
 
 ## File Systems & Partitions
 boot.supportedFilesystems = [ "exfat" ];
@@ -28,6 +29,7 @@ boot.supportedFilesystems = [ "exfat" ];
 # Supporting packages
 environment.systemPackages = with pkgs; [
   gparted # Partition manager
+  kdePackages.filelight # Disk usage visualizer
   networkmanagerapplet # adds nm-applet for system trays
 ];
 }
