@@ -15,6 +15,7 @@ imports = [
   # language dev environments
   ./packages/development/cpp.nix
   ./packages/development/java.nix
+  ./packages/development/py.nix
   ./packages/development/rust.nix
 
 

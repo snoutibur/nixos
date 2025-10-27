@@ -13,6 +13,7 @@
 
         # Common dependencies
         gcc
+        stdenv.cc.cc.lib
 
         # Jetbrains tooling
         pkgs-unstable.jetbrains.idea-ultimate # Idea is my main editor
@@ -22,5 +23,9 @@
         podman
         podman-desktop
     ];
+
+        # Allows environment access to libstdc++.so.6
+        environment.variables.LD_LIBRARY_PATH =
+          "${pkgs.stdenv.cc.cc.lib}/lib";
   };
 }

@@ -6,7 +6,8 @@
   bloat.enable = true;
 
   devtools.enable = true;
-  cdev.enable = true;
+  cdev.enable = false;
   java.enable = true;
+  pydev.enable = true;
   rust.enable = true;
 }
