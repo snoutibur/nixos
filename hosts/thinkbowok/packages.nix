@@ -3,6 +3,7 @@
 {
   # Enable package sets for this machine
   daily.enable = true;
+  productivity.enable = true;
   bloat.enable = true;
 
   devtools.enable = true;
