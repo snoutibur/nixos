@@ -11,6 +11,7 @@
         tmux
         btop
         fastfetch
+
         # Files
         lazygit
         tree
