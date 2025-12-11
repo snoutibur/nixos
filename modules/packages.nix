@@ -7,7 +7,10 @@ imports = [
   # essentials
   ./packages/core.nix # necessities for the system to run or read dotfiles
   ./packages/daily.nix # essential everyday tools
+
+  # Tooling
   ./packages/productivity.nix # Office suite & Helpers
+  ./packages/creative.nix # Creative suite
 
   # Development
   ./packages/clitools.nix # helpful CLI utilities
@@ -16,9 +19,9 @@ imports = [
   # language dev environments
   ./packages/development/cpp.nix
   ./packages/development/java.nix
+  ./packages/development/js.nix
   ./packages/development/py.nix
   ./packages/development/rust.nix
-
 
   # Misc
   ./packages/bloatware.nix # fun packages

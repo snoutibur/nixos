@@ -9,6 +9,7 @@
   devtools.enable = true;
   cdev.enable = false;
   java.enable = true;
+  js.enable = true;
   pydev.enable = true;
   rust.enable = true;
 }

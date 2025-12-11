@@ -10,12 +10,19 @@
   daily.enable = true; # Day to day essentials
   bloat.enable = false; # Silly fun
 
+  # Tooling
+  creative.enable = false; # creativity suite
+  productivity.enable = false; # Productivity suite
+
   # Developer #
   devtools.enable = false; # base development tooling
   # language environments
   cdev.enable = false;
   java.enable = false;
+  js.enable = false;
+  pydev.enable = false;
   rust.enable = false;
+
 
   # Define one-off packages for this machine
     packages = with pkgs; [
