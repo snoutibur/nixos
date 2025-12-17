@@ -6,9 +6,10 @@
   };
 
   config = lib.mkIf config.js.enable {
+    programs.npm.enable = true;
+
     environment.systemPackages = [
       # language
-      pkgs.bun
       pkgs.yarn
       pkgs.electron
 
