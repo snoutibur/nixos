@@ -25,6 +25,7 @@ imports = [
 
   # Misc
   ./packages/bloatware.nix # fun packages
+  ./packages/games.nix # GAYMING!!
 ];
 
 environment.sessionVariables = {

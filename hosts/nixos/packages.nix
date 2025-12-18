@@ -8,6 +8,7 @@
   # Other packages are installed as part of another module, such as hyprland in DE.nix
 
   daily.enable = true; # Day to day essentials
+  games.enable = false; # Games
   bloat.enable = false; # Silly fun
 
   # Tooling
