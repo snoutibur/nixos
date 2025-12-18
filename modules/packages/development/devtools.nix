@@ -16,7 +16,7 @@
         stdenv.cc.cc.lib
 
         # Jetbrains tooling
-        pkgs-unstable.jetbrains.idea-ultimate # Idea is my main editor
+        pkgs-unstable.jetbrains.idea # Idea is my main editor
 
         # Distrobox & Containers
         distrobox

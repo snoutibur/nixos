@@ -14,7 +14,7 @@
       python313Packages.notebook
 
       # tooling
-      pkgs-unstable.jetbrains.pycharm-professional
+      pkgs-unstable.jetbrains.pycharm
     ];
   };
 }
