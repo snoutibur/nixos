@@ -15,8 +15,9 @@
         gcc
         stdenv.cc.cc.lib
 
-        # Jetbrains tooling
-        pkgs-unstable.jetbrains.idea # Idea is my main editor
+        # Editors
+        zed-editor # lightweight editor
+        pkgs-unstable.jetbrains.idea # heavyweight editor
 
         # Distrobox & Containers
         distrobox
