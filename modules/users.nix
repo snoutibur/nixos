@@ -24,9 +24,6 @@ users.users.doge = {
   description = "snoutibur";
   extraGroups = [ "networkmanager" "wheel" ];
 
-  # University required VPN
-  services.globalprotect.enable = true;
-
   packages = with pkgs; [
     protonvpn-gui
   ];
