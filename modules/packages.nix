@@ -18,6 +18,7 @@ imports = [
 
   # language dev environments
   ./packages/development/cpp.nix
+  ./packages/development/csharp.nix
   ./packages/development/java.nix
   ./packages/development/js.nix
   ./packages/development/py.nix

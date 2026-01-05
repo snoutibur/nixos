@@ -10,6 +10,7 @@
   # Development
   devtools.enable = true;
   cdev.enable = false;
+  csdev.enable = true;
   java.enable = true;
   js.enable = true;
   pydev.enable = false;

@@ -19,6 +19,7 @@
   devtools.enable = false; # base development tooling
   # language environments
   cdev.enable = false;
+  csdev.enable = false;
   java.enable = false;
   js.enable = false;
   pydev.enable = false;
