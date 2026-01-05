@@ -23,8 +23,12 @@ users.users.doge = {
   isNormalUser = true;
   description = "snoutibur";
   extraGroups = [ "networkmanager" "wheel" ];
-  packages = with pkgs; [
 
+  # University required VPN
+  services.globalprotect.enable = true;
+
+  packages = with pkgs; [
+    protonvpn-gui
   ];
 };
 }

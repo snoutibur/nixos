@@ -7,6 +7,7 @@
 
   config = lib.mkIf config.productivity.enable {
     environment.systemPackages = with pkgs; [
+      # Markdown & LaTeX
       pandoc
       texliveFull
     ];
