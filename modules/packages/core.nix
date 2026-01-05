@@ -14,6 +14,7 @@
       # Required for system management
       git
       dotter # Dotfile manager
+      stow # alt dotfile manager
       konsave # KDE Plasma config manager
       home-manager # secondary dots & config
 
