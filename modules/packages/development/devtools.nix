@@ -16,13 +16,17 @@
         stdenv.cc.cc.lib
 
         # Editors
-        zed-editor # lightweight editor
-        pkgs-unstable.jetbrains.idea # heavyweight editor
+        pkgs-unstable.zed-editor-fhs # lightweight editor
+        pkgs-unstable.jetbrains.idea # chonky editor
 
         # Distrobox & Containers
         distrobox
         podman
         podman-desktop
+
+        # Nix language servers
+        nixd
+        nil
     ];
 
         # Allows environment access to libstdc++.so.6
