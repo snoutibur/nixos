@@ -15,4 +15,9 @@
   js.enable = true;
   pydev.enable = false;
   rust.enable = false;
+
+  # Define one-off packages for this machine
+  environment.systemPackages = [
+
+  ];
 }

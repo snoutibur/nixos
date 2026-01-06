@@ -25,9 +25,8 @@
   pydev.enable = false;
   rust.enable = false;
 
-
   # Define one-off packages for this machine
-    packages = with pkgs; [
+  environment.systemPackages = [
 
   ];
 }
